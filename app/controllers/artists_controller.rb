@@ -4,12 +4,13 @@ class ArtistsController < ApplicationController
   # GET /artists
   # GET /artists.json
   def index
-    @artists = Artist.all
+    @artists = Artist.order(name: :asc)
   end
 
   # GET /artists/1
   # GET /artists/1.json
   def show
+    @artist = Artist.find( params[:id] )
   end
 
   # GET /artists/new
