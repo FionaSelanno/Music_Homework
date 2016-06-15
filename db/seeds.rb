@@ -32,3 +32,11 @@ artist_songs ["Anouk"] = [
   ["Birds", "Isolated from the outside. Clouds have taken all the light. I have no control. It seems my thoughts wander off. Of the time when I tried to. Live life without you..."],
   ["Lost", "If roses are meant to be red. And violets to be blue. Why isn't my heart meant for you "]
 ]
+
+artist_songs.each do | aritst_name, songs |
+  artist= Artist.find_by( name: artist_name )
+
+  songs.each do |title, lyrics|
+    Song.create( title:title, artist_id: artist.id, lyrics:lyrics)
+  end
+end
