@@ -4,5 +4,8 @@
   <%= @artist.name %>
 </h1>
 
-<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<p><%= @song.title%></p>
+<p><%= @song.lyrics%></p>
+
+<%= link_to 'Edit', edit_artist_path(@artist) %>
 <%= link_to 'Back', artists_path %>
