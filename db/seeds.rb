@@ -33,10 +33,10 @@ artist_songs ["Anouk"] = [
   ["Lost", "If roses are meant to be red. And violets to be blue. Why isn't my heart meant for you "]
 ]
 
-artist_songs.each do | aritst_name, songs |
+artist_songs.each do | artist_name, songs |
   artist= Artist.find_by( name: artist_name )
 
   songs.each do |title, lyrics|
-    Song.create( title:title, artist_id: artist.id, lyrics:lyrics)
+    Song.create( title:title, lyrics:lyrics)
   end
 end
